@@ -1,0 +1,6 @@
+rootProject.name = 'spring-cloud-data-flow-example'
+
+include 'kafka-writer-json'
+include 'kafka-writer-json'
+include 'kafka-reader-json'
+
