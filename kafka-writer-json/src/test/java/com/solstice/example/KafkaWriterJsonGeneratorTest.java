@@ -50,6 +50,7 @@ public class KafkaWriterJsonGeneratorTest {
 	@Test
 	public void shouldIncrementRegisteredMetric() throws InterruptedException {
 
+		//Todo: Research if the schedule can acutally be managed / configured in order to not have this test rely on time
 		Counter registerdMetric = registry.find("kafka.write.json.success").counter();
 
 		//Application starts up and finishes executing main, then runs twice more
