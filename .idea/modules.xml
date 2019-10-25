@@ -11,7 +11,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.solstice.example.spring-cloud-data-flow-example.iml" filepath="$PROJECT_DIR$/.idea/modules/com.solstice.example.spring-cloud-data-flow-example.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.solstice.example.spring-cloud-data-flow-example.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.solstice.example.spring-cloud-data-flow-example.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.solstice.example.spring-cloud-data-flow-example.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.solstice.example.spring-cloud-data-flow-example.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kafka-writer-json.iml" filepath="$PROJECT_DIR$/.idea/modules/kafka-writer-json.iml" />
     </modules>
   </component>
 </project>

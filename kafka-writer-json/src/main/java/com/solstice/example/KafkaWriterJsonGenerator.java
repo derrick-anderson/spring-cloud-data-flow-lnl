@@ -6,6 +6,7 @@ import com.solstice.example.domain.KafkaJsonData;
 import io.micrometer.core.instrument.simple.SimpleMeterRegistry;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.messaging.Processor;
+import org.springframework.cloud.stream.messaging.Source;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -16,20 +17,21 @@ import java.util.Random;
 import static java.lang.Math.abs;
 
 @EnableScheduling
-@EnableBinding(Processor.class)
+@EnableBinding(Source.class)
 public class KafkaWriterJsonGenerator {
 
+	// Declare our micrometer registry to be used.
 	private final SimpleMeterRegistry registry;
 
-	private final Processor channels;
+	private final Source channels;
 
-	public KafkaWriterJsonGenerator(SimpleMeterRegistry registry, Processor channels) {
+	public KafkaWriterJsonGenerator(SimpleMeterRegistry registry, Source channels) {
 		this.registry = registry;
 		this.channels = channels;
 	}
 
 	@Scheduled(fixedRateString = "1000")
-	public void generateData() throws JsonProcessingException {
+	public void generateData() {
 
 		// Make a new object
 		KafkaJsonData data = new KafkaJsonData();
@@ -38,9 +40,13 @@ public class KafkaWriterJsonGenerator {
 		data.profit = abs(new Random().nextInt());
 
 		// Send to Output Channel
-		this.channels.output().send(MessageBuilder.withPayload(new ObjectMapper().writeValueAsString(data)).build());
-
-		// Count the Output
-		registry.counter("kafka.write.json").increment();
+		try {
+			this.channels.output().send(MessageBuilder.withPayload(new ObjectMapper().writeValueAsString(data)).build());
+			// Count the Output
+			registry.counter("kafka.write.json.success").increment();
+		} catch (JsonProcessingException ex) {
+			// Capture the Failure as a count
+			registry.counter("kafka.write.json.failure").increment();
+		}
 	}
 }

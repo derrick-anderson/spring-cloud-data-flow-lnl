@@ -1,10 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fe84cdc9-98f4-40c9-b9c5-22a5ffafa8d0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="fe84cdc9-98f4-40c9-b9c5-22a5ffafa8d0" name="Default Changelist" comment="Initial commit&#10;Creates Kafka Writer Json Project">
+      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/scripts/springboot.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-reader-json/src/main/java/com/solstice/example/KafkaReaderJsonApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-reader-json/src/main/java/com/solstice/example/KafkaReaderJsonProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-reader-json/src/test/java/com/solstice/example/KafkaReaderJsonProcessorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-reader-json/src/test/resources/sampleKafkaMessage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_esotericsoftware_kryo_shaded_3_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_esotericsoftware_minlog_1_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_classmate_1_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_core_2_9_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_databind_2_9_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_micrometer_micrometer_core_1_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_projectreactor_reactor_core_3_2_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_annotation_javax_annotation_api_1_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_validation_validation_api_2_0_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_ws_rs_javax_ws_rs_api_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_bytebuddy_byte_buddy_1_9_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_bytebuddy_byte_buddy_agent_1_9_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_kafka_connect_api_2_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_kafka_connect_json_2_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_kafka_kafka_clients_2_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_kafka_kafka_streams_2_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_logging_log4j_log4j_api_2_11_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_logging_log4j_log4j_to_slf4j_2_11_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tomcat_embed_tomcat_embed_el_9_0_22.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_assertj_assertj_core_3_11_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hdrhistogram_HdrHistogram_2_1_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jboss_logging_jboss_logging_3_3_2_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_lz4_lz4_java_1_4_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_mockito_mockito_core_2_23_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_objenesis_objenesis_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_reactivestreams_reactive_streams_1_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_rocksdb_rocksdbjni_5_7_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_jul_to_slf4j_1_7_26.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_26.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_2_1_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_actuator_2_1_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_actuator_autoconfigure_2_1_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_autoconfigure_2_1_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_2_1_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_actuator_2_1_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_logging_2_1_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_test_2_1_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_validation_2_1_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_test_2_1_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_test_autoconfigure_2_1_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_cloud_spring_cloud_function_context_2_0_2_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_cloud_spring_cloud_function_core_2_0_2_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_cloud_spring_cloud_stream_2_1_3_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_cloud_spring_cloud_stream_binder_kafka_core_2_1_3_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_cloud_spring_cloud_stream_binder_kafka_streams_2_1_3_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_cloud_spring_cloud_stream_test_support_2_1_3_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_integration_spring_integration_core_5_1_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_integration_spring_integration_jmx_5_1_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_integration_spring_integration_kafka_3_1_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_integration_spring_integration_tuple_1_0_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_kafka_spring_kafka_2_2_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_aop_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_beans_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_context_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_core_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_expression_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_jcl_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_messaging_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_test_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_tuple_1_0_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_tx_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_xerial_snappy_snappy_java_1_1_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_yaml_snakeyaml_1_23.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/com.solstice.example.spring-cloud-data-flow-example.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/com.solstice.example.spring-cloud-data-flow-example.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/com.solstice.example.spring-cloud-data-flow-example.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/com.solstice.example.spring-cloud-data-flow-example.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/com.solstice.example.spring-cloud-data-flow-example.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/com.solstice.example.spring-cloud-data-flow-example.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/kafka-reader-json/com.solstice.example.kafka-reader-json.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/kafka-reader-json/com.solstice.example.kafka-reader-json.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/kafka-reader-json/com.solstice.example.kafka-reader-json.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/kafka-reader-json/com.solstice.example.kafka-reader-json.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/kafka-writer-json/com.solstice.example.kafka-writer-json.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/kafka-writer-json/com.solstice.example.kafka-writer-json.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/kafka-writer-json/com.solstice.example.kafka-writer-json.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/kafka-writer-json/com.solstice.example.kafka-writer-json.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka-writer-json/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-writer-json/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka-reader-json/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-reader-json/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka-writer-json/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-writer-json/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka-writer-json/out/production/classes/META-INF/com.solstice.example.kafka-writer-json.main.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka-writer-json/out/production/classes/com/solstice/example/KafkaWriterJsonApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-writer-json/out/production/classes/com/solstice/example/KafkaWriterJsonApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka-writer-json/out/production/classes/com/solstice/example/KafkaWriterJsonGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-writer-json/out/production/classes/com/solstice/example/KafkaWriterJsonGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka-writer-json/out/production/classes/com/solstice/example/domain/KafkaJsonData.class" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-writer-json/out/production/classes/com/solstice/example/domain/KafkaJsonData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka-writer-json/out/test/classes/com/solstice/example/KafkaWriterJsonGeneratorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-writer-json/out/test/classes/com/solstice/example/KafkaWriterJsonGeneratorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka-writer-json/src/main/java/com/solstice/example/KafkaWriterJsonGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-writer-json/src/main/java/com/solstice/example/KafkaWriterJsonGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka-writer-json/src/test/java/com/solstice/example/KafkaWriterJsonGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-writer-json/src/test/java/com/solstice/example/KafkaWriterJsonGeneratorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -15,6 +108,7 @@
     <ignored path="$PROJECT_DIR$/kafka-reader-json/.gradle/" />
     <ignored path="$PROJECT_DIR$/kafka-reader-json/build/" />
     <ignored path="$PROJECT_DIR$/kafka-reader-json/out/" />
+    <ignored path=".idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +126,36 @@
         <task path="$PROJECT_DIR$/kafka-writer-json">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/kafka-reader-json">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="spring-cloud-data-flow-example" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="spring-cloud-data-flow-example" type="f1a62948:ProjectNode" />
+                <item name=":kafka-writer-json" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="spring-cloud-data-flow-example" type="f1a62948:ProjectNode" />
+                <item name=":kafka-writer-json" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="spring-cloud-data-flow-example" type="f1a62948:ProjectNode" />
+                <item name=":kafka-writer-json" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -49,53 +167,75 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kafka-writer-json/src/main/java/com/solstice/example/KafkaWriterJsonApplication.java">
+        <entry file="file://$PROJECT_DIR$/kafka-writer-json/src/test/java/com/solstice/example/KafkaWriterJsonGeneratorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="29" selection-start-column="29" selection-end-column="29" />
+            <state relative-caret-position="469">
+              <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#836#837#0" expanded="true" />
-                <element signature="e#898#899#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kafka-writer-json/src/main/java/com/solstice/example/KafkaWriterJsonApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kafka-writer-json/src/main/java/com/solstice/example/domain/KafkaJsonData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kafka-writer-json/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gradlew">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kafka-reader-json/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/kafka-writer-json/src/main/resources/application.yml">
+        <entry file="file://$PROJECT_DIR$/gradle/scripts/springboot.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kafka-writer-json/src/test/java/com/solstice/example/KafkaWriterJsonGeneratorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kafka-reader-json/build.gradle">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kafka-writer-json/src/main/java/com/solstice/example/KafkaWriterJsonGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="75">
+              <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -106,8 +246,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -117,18 +257,27 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/settings.gradle" />
-        <option value="$PROJECT_DIR$/kafka-writer-json/build.gradle" />
         <option value="$PROJECT_DIR$/kafka-writer-json/src/main/java/kafkaWriterJsonApplication.java" />
         <option value="$PROJECT_DIR$/kafka-writer-json/src/main/java/KafkaWriterJsonApplication.java" />
         <option value="$PROJECT_DIR$/kafka-writer-json/src/main/java/com/solstice/example/domain/KafkaJsonDataBuilder.java" />
         <option value="$PROJECT_DIR$/kafka-writer-json/src/main/java/com/solstice/example/KafkaWriterJsonApplication.java" />
         <option value="$PROJECT_DIR$/kafka-writer-json/src/test/java/com/solstice/example/KafkaWriterJsonApplicationTest.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/kafka-writer-json/src/main/java/com/solstice/example/domain/KafkaJsonData.java" />
-        <option value="$PROJECT_DIR$/kafka-writer-json/src/test/java/com/solstice/example/KafkaWriterJsonGeneratorTest.java" />
-        <option value="$PROJECT_DIR$/kafka-writer-json/src/main/java/com/solstice/example/KafkaWriterJsonGenerator.java" />
+        <option value="$PROJECT_DIR$/kafka-reader-json/src/main/java/com/solstice/example/KafkaReaderJsonApplication.java" />
+        <option value="$PROJECT_DIR$/kafka-reader-json/src/main/java/com/solstice/example/KafkaReaderJsonProcessor.java" />
+        <option value="$PROJECT_DIR$/kafka-reader-json/sampleKafkaMessage.json" />
+        <option value="$PROJECT_DIR$/kafka-reader-json/src/test/java/com/solstice/example/KafkaReaderJsonProcessorTest.java" />
+        <option value="$PROJECT_DIR$/kafka-writer-json/src/main/resources/application-local.yml" />
         <option value="$PROJECT_DIR$/kafka-writer-json/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/settings.gradle" />
+        <option value="$PROJECT_DIR$/kafka-writer-json/src/main/java/com/solstice/example/KafkaWriterJsonGenerator.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/kafka-writer-json/src/test/java/com/solstice/example/KafkaWriterJsonGeneratorTest.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/gradle.properties" />
+        <option value="$PROJECT_DIR$/kafka-reader-json/build.gradle" />
+        <option value="$PROJECT_DIR$/kafka-writer-json/build.gradle" />
+        <option value="$PROJECT_DIR$/gradle/scripts/springboot.gradle" />
       </list>
     </option>
   </component>
@@ -138,8 +287,8 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="width" value="714" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -157,52 +306,16 @@
               <item name="spring-cloud-data-flow-example" type="b2602c69:ProjectViewProjectNode" />
               <item name="spring-cloud-data-flow-example" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
-            <path>
-              <item name="spring-cloud-data-flow-example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-data-flow-example" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kafka-writer-json" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-data-flow-example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-data-flow-example" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kafka-writer-json" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-data-flow-example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-data-flow-example" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kafka-writer-json" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-data-flow-example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-data-flow-example" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kafka-writer-json" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-data-flow-example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-data-flow-example" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-data-flow-example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-data-flow-example" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -214,9 +327,9 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build.tools" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -225,8 +338,14 @@
     <key name="CreateBuilderDialog.RecentsKey">
       <recent name="com.solstice.example.domain" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/kafka-writer-json/src/main/resources" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/kafka-reader-json/src/test/resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -241,45 +360,88 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.KafkaWriterJsonGeneratorTest">
+  <component name="RunManager" selected="Gradle.spring-cloud-data-flow-example:kafka-writer-json [build]">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KafkaWriterJsonApplicationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="com.solstice.example.kafka-writer-json.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.solstice.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.solstice.example" />
-      <option name="MAIN_CLASS_NAME" value="com.solstice.example.KafkaWriterJsonApplicationTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="spring-cloud-data-flow-example [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="KafkaWriterJsonApplicationTest.generateData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="com.solstice.example.kafka-writer-json.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.solstice.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.solstice.example" />
-      <option name="MAIN_CLASS_NAME" value="com.solstice.example.KafkaWriterJsonApplicationTest" />
-      <option name="METHOD_NAME" value="generateData" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="spring-cloud-data-flow-example:kafka-reader-json [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/kafka-reader-json" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="spring-cloud-data-flow-example:kafka-writer-json [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/kafka-writer-json" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="spring-cloud-data-flow-example:kafka-writer-json [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/kafka-writer-json" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="KafkaWriterJsonGeneratorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="com.solstice.example.kafka-writer-json.test" />
@@ -297,23 +459,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KafkaWriterJsonGeneratorTest.generateData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="com.solstice.example.kafka-writer-json.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.solstice.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.solstice.example" />
-      <option name="MAIN_CLASS_NAME" value="com.solstice.example.KafkaWriterJsonGeneratorTest" />
-      <option name="METHOD_NAME" value="generateData" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -321,22 +466,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KafkaWriterJsonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="com.solstice.example.kafka-writer-json.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.solstice.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.solstice.example.KafkaWriterJsonApplication" />
+    <configuration name="KafkaReaderJsonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="com.solstice.example.kafka-reader-json.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.solstice.example.KafkaReaderJsonApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="kafkaWriterJsonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="com.solstice.example.kafka-writer-json.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.solstice.example.kafkaWriterJsonApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.solstice.example.KafkaWriterJsonApplication" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="/Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -349,13 +490,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Gradle.spring-cloud-data-flow-example [dependencies]" />
+      <item itemvalue="Gradle.spring-cloud-data-flow-example:kafka-reader-json [bootJar]" />
+      <item itemvalue="Gradle.spring-cloud-data-flow-example:kafka-writer-json [bootJar]" />
+      <item itemvalue="JUnit.KafkaWriterJsonGeneratorTest" />
+      <item itemvalue="Spring Boot.KafkaReaderJsonApplication" />
+      <item itemvalue="Spring Boot.kafkaWriterJsonApplication" />
+      <item itemvalue="Gradle.spring-cloud-data-flow-example:kafka-writer-json [build]" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.spring-cloud-data-flow-example:kafka-writer-json [build]" />
+        <item itemvalue="Gradle.spring-cloud-data-flow-example [dependencies]" />
         <item itemvalue="JUnit.KafkaWriterJsonGeneratorTest" />
-        <item itemvalue="Spring Boot.KafkaWriterJsonApplication" />
-        <item itemvalue="JUnit.KafkaWriterJsonGeneratorTest.generateData" />
-        <item itemvalue="JUnit.KafkaWriterJsonApplicationTest.generateData" />
-        <item itemvalue="JUnit.KafkaWriterJsonApplicationTest" />
+        <item itemvalue="Gradle.spring-cloud-data-flow-example:kafka-writer-json [bootJar]" />
+        <item itemvalue="Gradle.spring-cloud-data-flow-example:kafka-reader-json [bootJar]" />
       </list>
     </recent_temporary>
   </component>
@@ -371,66 +521,78 @@
       <updated>1566743870686</updated>
       <workItem from="1566743872491" duration="153000" />
       <workItem from="1566744218851" duration="1390000" />
-      <workItem from="1566746834278" duration="5064000" />
+      <workItem from="1566746834278" duration="9659000" />
+      <workItem from="1571801958486" duration="1527000" />
+      <workItem from="1571804656300" duration="501000" />
+      <workItem from="1571806081396" duration="5279000" />
+      <workItem from="1571960952702" duration="427000" />
+      <workItem from="1571973809067" duration="5209000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit&#10;Creates Kafka Writer Json Project">
+      <created>1566841206787</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1566841206787</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="KafkaWriterJsonGeneratorTest - 2019.08.25 at 11h 11m 19s.xml">
+    <history-entry file="KafkaReaderJsonProcessorTest_shouldProcessIncomingMessageAsValid - 2019.08.30 at 16h 05m 02s.xml">
+      <configuration name="KafkaReaderJsonProcessorTest.shouldProcessIncomingMessageAsValid" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="KafkaReaderJsonProcessorTest_shouldProcessIncomingMessageAsValid - 2019.08.30 at 16h 05m 05s.xml">
+      <configuration name="KafkaReaderJsonProcessorTest.shouldProcessIncomingMessageAsValid" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="KafkaReaderJsonProcessorTest_shouldProcessIncomingMessageAsValid - 2019.08.30 at 16h 06m 52s.xml">
+      <configuration name="KafkaReaderJsonProcessorTest.shouldProcessIncomingMessageAsValid" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="KafkaReaderJsonProcessorTest_shouldProcessIncomingMessageAsValid - 2019.08.30 at 16h 07m 05s.xml">
+      <configuration name="KafkaReaderJsonProcessorTest.shouldProcessIncomingMessageAsValid" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="KafkaReaderJsonProcessorTest_shouldProcessIncomingMessageAsValid - 2019.08.30 at 16h 08m 18s.xml">
+      <configuration name="KafkaReaderJsonProcessorTest.shouldProcessIncomingMessageAsValid" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="KafkaReaderJsonProcessorTest_shouldProcessIncomingMessageAsValid - 2019.08.30 at 16h 10m 10s.xml">
+      <configuration name="KafkaReaderJsonProcessorTest.shouldProcessIncomingMessageAsValid" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="KafkaReaderJsonProcessorTest_shouldProcessIncomingMessageAsValid - 2019.08.30 at 16h 10m 34s.xml">
+      <configuration name="KafkaReaderJsonProcessorTest.shouldProcessIncomingMessageAsValid" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="KafkaReaderJsonProcessorTest_shouldProcessIncomingMessageAsValid - 2019.08.30 at 16h 12m 52s.xml">
+      <configuration name="KafkaReaderJsonProcessorTest.shouldProcessIncomingMessageAsValid" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="KafkaWriterJsonGeneratorTest - 2019.10.23 at 00h 12m 42s.xml">
       <configuration name="KafkaWriterJsonGeneratorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="KafkaWriterJsonGeneratorTest - 2019.08.25 at 11h 13m 30s.xml">
-      <configuration name="KafkaWriterJsonGeneratorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="KafkaWriterJsonGeneratorTest - 2019.08.25 at 11h 14m 20s.xml">
-      <configuration name="KafkaWriterJsonGeneratorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="KafkaWriterJsonGeneratorTest_generateData - 2019.08.25 at 11h 23m 21s.xml">
-      <configuration name="KafkaWriterJsonGeneratorTest.generateData" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="KafkaWriterJsonGeneratorTest_generateData - 2019.08.25 at 11h 26m 42s.xml">
-      <configuration name="KafkaWriterJsonGeneratorTest.generateData" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="KafkaWriterJsonGeneratorTest_generateData - 2019.08.25 at 11h 28m 04s.xml">
-      <configuration name="KafkaWriterJsonGeneratorTest.generateData" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="KafkaWriterJsonGeneratorTest_generateData - 2019.08.25 at 11h 31m 33s.xml">
-      <configuration name="KafkaWriterJsonGeneratorTest.generateData" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="KafkaWriterJsonGeneratorTest - 2019.08.25 at 11h 42m 25s.xml">
-      <configuration name="KafkaWriterJsonGeneratorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="KafkaWriterJsonGeneratorTest - 2019.08.25 at 11h 42m 50s.xml">
-      <configuration name="KafkaWriterJsonGeneratorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="KafkaWriterJsonGeneratorTest - 2019.08.26 at 12h 18m 50s.xml">
+    <history-entry file="KafkaWriterJsonGeneratorTest - 2019.10.23 at 12h 30m 39s.xml">
       <configuration name="KafkaWriterJsonGeneratorTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7532000" />
+    <option name="totallyTimeSpent" value="25070000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19670959" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.45180723" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32891566" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49928468" visible="true" weight="0.59638554" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007153" side_tool="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32891566" />
       <window_info anchor="bottom" id="Build" order="12" weight="0.32891566" />
       <window_info anchor="bottom" id="Spring" order="13" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.32891566" />
@@ -438,29 +600,29 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Gradle" order="4" weight="0.3297568" />
+      <window_info anchor="right" id="Gradle" order="4" weight="0.2453505" />
       <window_info anchor="right" id="Maven" order="5" weight="0.3297568" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="Bean Validation" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19670959" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.45180723" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32891566" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49928468" visible="true" weight="0.26987952" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007153" side_tool="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Build" order="12" weight="0.32891566" />
       <window_info anchor="bottom" id="Spring" order="13" />
@@ -469,7 +631,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Gradle" order="4" weight="0.3297568" />
+      <window_info anchor="right" id="Gradle" order="4" visible="true" weight="0.2453505" />
       <window_info anchor="right" id="Maven" order="5" weight="0.3297568" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Database" order="7" />
@@ -479,14 +641,24 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit&#10;Creates Kafka Writer Json Project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit&#10;Creates Kafka Writer Json Project" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kafka-reader-json/src/test/java/com/solstice/example/KafkaReaderJsonProcessorTest.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/gradlew.bat">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradlew">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/kafka-writer-json/settings.gradle" />
@@ -504,17 +676,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kafka-writer-json/src/main/java/com/solstice/example/domain/KafkaJsonDataBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/kafka-writer-json/src/main/java/com/solstice/example/domain/KafkaJsonDataBuilder.java" />
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/5.1.9.RELEASE/4c4d55141bf7dafaa4f64cce9a12dd12af52ce8d/spring-context-5.1.9.RELEASE-sources.jar!/org/springframework/scheduling/support/DelegatingErrorHandlingRunnable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
@@ -529,20 +691,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kafka-writer-json/build.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/kafka-reader-json/src/main/java/com/solstice/example/KafkaReaderJsonApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        <state relative-caret-position="150">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kafka-writer-json/src/test/java/com/solstice/example/KafkaWriterJsonGeneratorTest.java">
+    <entry file="file://$PROJECT_DIR$/kafka-reader-json/src/main/java/com/solstice/example/KafkaReaderJsonProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kafka-reader-json/src/test/java/com/solstice/example/KafkaReaderJsonProcessorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kafka-reader-json/src/test/resources/sampleKafkaMessage.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="49" selection-start-column="49" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-stream/2.1.3.RELEASE/4f1a4acdd49139ecab85cc1952c3db2af52fd34d/spring-cloud-stream-2.1.3.RELEASE-sources.jar!/org/springframework/cloud/stream/messaging/Sink.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45">
+          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-stream/2.1.3.RELEASE/4f1a4acdd49139ecab85cc1952c3db2af52fd34d/spring-cloud-stream-2.1.3.RELEASE-sources.jar!/org/springframework/cloud/stream/messaging/Source.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-stream/2.1.3.RELEASE/4f1a4acdd49139ecab85cc1952c3db2af52fd34d/spring-cloud-stream-2.1.3.RELEASE-sources.jar!/org/springframework/cloud/stream/messaging/Processor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="25" column="45" lean-forward="true" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kafka-writer-json/src/main/resources/application-local.yml" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-stream/3.0.0.M4/b214a4035d9565f7bdf3273a1b95d9c77ce326b/spring-cloud-stream-3.0.0.M4-sources.jar!/org/springframework/cloud/stream/binding/AbstractBindableProxyFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="142" column="11" selection-start-line="142" selection-start-column="11" selection-end-line="142" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kafka-writer-json/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kafka-writer-json/src/main/java/com/solstice/example/KafkaWriterJsonApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -551,40 +776,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/kafka-writer-json/src/main/java/com/solstice/example/domain/KafkaJsonData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kafka-reader-json/build.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kafka-writer-json/src/main/java/com/solstice/example/KafkaWriterJsonGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+        <state relative-caret-position="442">
+          <caret line="48" column="48" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kafka-writer-json/src/main/java/com/solstice/example/KafkaWriterJsonApplication.java">
+    <entry file="file://$PROJECT_DIR$/kafka-writer-json/src/test/java/com/solstice/example/KafkaWriterJsonGeneratorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="29" selection-start-column="29" selection-end-column="29" />
+        <state relative-caret-position="469">
+          <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#836#837#0" expanded="true" />
-            <element signature="e#898#899#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kafka-writer-json/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/gradlew">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kafka-reader-json/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kafka-writer-json/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/scripts/springboot.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -629,7 +894,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -641,7 +906,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>main|kafka-writer-json|example</last-edited>
+          <last-edited>test|kafka-writer-json|example</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -666,7 +931,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Gradle: ch.qos.logback:logback-classic:1.2.3</last-edited>
+          <last-edited>Gradle: junit:junit:4.12</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
