@@ -1,8 +1,7 @@
 package com.solstice.example;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.solstice.example.domain.KafkaJsonData;
+import io.micrometer.core.instrument.Counter;
 import io.micrometer.prometheus.PrometheusMeterRegistry;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.messaging.Source;
@@ -19,14 +18,32 @@ import static java.lang.Math.abs;
 @EnableBinding(Source.class)
 public class KafkaWriterJsonGenerator {
 
-	// Declare our micrometer registry to be used.
-	private final PrometheusMeterRegistry registry;
+	private Source channels;
+	private final String KAFKA_JSON_GENERATE_SEND = "kafka.json.generate.send";
+	private final String KAFKA_JSON_GENERATE_VOID = "kafka.json.generate.void";
+	private final String KAFKA_JSON_GENERATE_FINALIZED = "kafka.json.generate.finalized";
 
-	private final Source channels;
+	// Declare our micrometer registry and counters to be used.
+	private PrometheusMeterRegistry registry;
+	private Counter sent;
+	private Counter finalized;
+	private Counter voided;
 
 	public KafkaWriterJsonGenerator(PrometheusMeterRegistry registry, Source channels) {
 		this.registry = registry;
 		this.channels = channels;
+		this.sent = Counter.builder(KAFKA_JSON_GENERATE_SEND)
+				.baseUnit("SaleRecord")
+				.description("Kafka Json Messages Written")
+				.register(registry);
+		this.finalized = Counter.builder(KAFKA_JSON_GENERATE_FINALIZED)
+				.baseUnit("SaleRecord")
+				.description("Kafka Json Records Finalized")
+				.register(registry);
+		this.voided = Counter.builder(KAFKA_JSON_GENERATE_VOID)
+				.baseUnit("SaleRecord")
+				.description("Kafka Json Records Voided")
+				.register(registry);
 	}
 
 	@Scheduled(fixedRateString = "1000")
@@ -39,14 +56,24 @@ public class KafkaWriterJsonGenerator {
 		data.profit = abs(new Random().nextInt());
 		data.weekend = new Random().nextBoolean();
 
-		// Send to Output Channel
-		try {
-			this.channels.output().send(MessageBuilder.withPayload(new ObjectMapper().writeValueAsString(data)).build());
-			// Count the Output
-			registry.counter("kafka.write.json.success").increment();
-		} catch (JsonProcessingException ex) {
-			// Capture the Failure as a count
-			registry.counter("kafka.write.json.failure").increment();
+		// Register Metrics
+		registerMetrics(data);
+
+		this.channels.output().send(MessageBuilder.withPayload(data).build());
+	}
+
+	private void registerMetrics(KafkaJsonData data){
+		// Record all creations
+		sent.increment();
+
+		// Record any sales generated over the weekend
+		if(!data.weekend){
+			finalized.increment();
+		}
+
+		// Record any sales marked as voided by POS system
+		if(!data.valid){
+			voided.increment();
 		}
 	}
 }

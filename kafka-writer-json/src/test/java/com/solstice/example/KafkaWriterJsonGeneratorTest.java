@@ -3,7 +3,6 @@ package com.solstice.example;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.solstice.example.domain.KafkaJsonData;
 import io.micrometer.core.instrument.Counter;
-import io.micrometer.core.instrument.simple.SimpleMeterRegistry;
 import io.micrometer.prometheus.PrometheusMeterRegistry;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,7 +14,6 @@ import org.springframework.messaging.Message;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -24,18 +22,18 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class KafkaWriterJsonGeneratorTest {
 
 	@Autowired
-	public Source source;
+	Source channels;
 
 	@Autowired
-	public MessageCollector messageCollector;
+	MessageCollector messageCollector;
 
 	@Autowired
 	PrometheusMeterRegistry registry;
 
 	@Test
-	public void generateData() throws InterruptedException, IOException {
+	public void generateData_shouldEmitMessage() throws InterruptedException, IOException {
 
-		Message message = messageCollector.forChannel(source.output()).poll(5, TimeUnit.SECONDS);
+		Message message = messageCollector.forChannel(channels.output()).poll();
 
 		assertThat(message.getPayload()).isNotNull();
 
@@ -53,7 +51,7 @@ public class KafkaWriterJsonGeneratorTest {
 	@Test
 	public void shouldIncrementRegisteredMetric() throws InterruptedException {
 
-		Counter registerdMetric = registry.find("kafka.write.json.success").counter();
+		Counter registerdMetric = registry.find("kafka.json.generate.send").counter();
 
 		//Application starts up and finishes executing main, then runs twice more
 		Thread.sleep(2000);
