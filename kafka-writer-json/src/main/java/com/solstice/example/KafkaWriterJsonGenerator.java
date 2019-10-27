@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.solstice.example.domain.KafkaJsonData;
 import io.micrometer.core.instrument.simple.SimpleMeterRegistry;
+import io.micrometer.prometheus.PrometheusMeterRegistry;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.messaging.Processor;
 import org.springframework.cloud.stream.messaging.Source;
@@ -21,11 +22,11 @@ import static java.lang.Math.abs;
 public class KafkaWriterJsonGenerator {
 
 	// Declare our micrometer registry to be used.
-	private final SimpleMeterRegistry registry;
+	private final PrometheusMeterRegistry registry;
 
 	private final Source channels;
 
-	public KafkaWriterJsonGenerator(SimpleMeterRegistry registry, Source channels) {
+	public KafkaWriterJsonGenerator(PrometheusMeterRegistry registry, Source channels) {
 		this.registry = registry;
 		this.channels = channels;
 	}
@@ -36,8 +37,9 @@ public class KafkaWriterJsonGenerator {
 		// Make a new object
 		KafkaJsonData data = new KafkaJsonData();
 		data.id = (Instant.now().getEpochSecond());
-		data.valid = (true);
+		data.valid = new Random().nextBoolean();
 		data.profit = abs(new Random().nextInt());
+		data.weekend = new Random().nextBoolean();
 
 		// Send to Output Channel
 		try {

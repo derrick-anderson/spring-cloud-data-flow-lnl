@@ -4,11 +4,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.solstice.example.domain.KafkaJsonData;
 import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.simple.SimpleMeterRegistry;
+import io.micrometer.prometheus.PrometheusMeterRegistry;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.cloud.stream.messaging.Processor;
 import org.springframework.cloud.stream.messaging.Source;
 import org.springframework.cloud.stream.test.binder.MessageCollector;
 import org.springframework.messaging.Message;
@@ -30,7 +30,7 @@ public class KafkaWriterJsonGeneratorTest {
 	public MessageCollector messageCollector;
 
 	@Autowired
-	SimpleMeterRegistry registry;
+	PrometheusMeterRegistry registry;
 
 	@Test
 	public void generateData() throws InterruptedException, IOException {
@@ -44,18 +44,20 @@ public class KafkaWriterJsonGeneratorTest {
 		KafkaJsonData thisData = new ObjectMapper().readValue(message.getPayload().toString(), KafkaJsonData.class);
 
 		assertThat(thisData.id).isNotNegative().isNotNull();
+		assertThat(thisData.profit).isNotNegative().isNotNull();
+		assertThat(thisData.valid).isNotNull();
+		assertThat(thisData.weekend).isNotNull();
 		assertThat(thisData.sourceName).isEqualTo("KafkaJsonWriter");
 	}
 
 	@Test
 	public void shouldIncrementRegisteredMetric() throws InterruptedException {
 
-		//Todo: Research if the schedule can acutally be managed / configured in order to not have this test rely on time
 		Counter registerdMetric = registry.find("kafka.write.json.success").counter();
 
 		//Application starts up and finishes executing main, then runs twice more
 		Thread.sleep(2000);
 
-		assertThat(registerdMetric.count()).isEqualTo(3.0);
+		assertThat(registerdMetric.count()).isGreaterThan(1.0);
 	}
 }
