@@ -6,7 +6,7 @@
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_11">
-    <output-test url="file://$MODULE_DIR$/../../out/test/classes" />
+    <output-test url="file://$MODULE_DIR$/../../build/classes/java/test" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../src/test">
       <sourceFolder url="file://$MODULE_DIR$/../../src/test/java" isTestSource="true" />
@@ -16,5 +16,5 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="com.solstice.example.spring-cloud-data-flow-example.main" />
   </component>
-  <component name="TestModuleProperties" production-module="com.solstice.example.spring-cloud-data-flow-example.main" />
+  <component name="TestModuleProperties" production-module="spring-cloud-data-flow-example.main" />
 </module>

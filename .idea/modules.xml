@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.solstice.example.kafka-reader-json.iml" filepath="$PROJECT_DIR$/.idea/modules/com.solstice.example.kafka-reader-json.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kafka-reader-json/com.solstice.example.kafka-reader-json.main.iml" filepath="$PROJECT_DIR$/.idea/modules/kafka-reader-json/com.solstice.example.kafka-reader-json.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kafka-reader-json/com.solstice.example.kafka-reader-json.test.iml" filepath="$PROJECT_DIR$/.idea/modules/kafka-reader-json/com.solstice.example.kafka-reader-json.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kafka-writer-json/com.solstice.example.kafka-writer-json.iml" filepath="$PROJECT_DIR$/.idea/modules/kafka-writer-json/com.solstice.example.kafka-writer-json.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kafka-writer-json/com.solstice.example.kafka-writer-json.main.iml" filepath="$PROJECT_DIR$/.idea/modules/kafka-writer-json/com.solstice.example.kafka-writer-json.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kafka-writer-json/com.solstice.example.kafka-writer-json.test.iml" filepath="$PROJECT_DIR$/.idea/modules/kafka-writer-json/com.solstice.example.kafka-writer-json.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.solstice.example.spring-cloud-data-flow-example.iml" filepath="$PROJECT_DIR$/.idea/modules/com.solstice.example.spring-cloud-data-flow-example.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.solstice.example.spring-cloud-data-flow-example.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.solstice.example.spring-cloud-data-flow-example.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.solstice.example.spring-cloud-data-flow-example.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.solstice.example.spring-cloud-data-flow-example.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kafka-reader-json/spring-cloud-data-flow-example.kafka-reader-json.iml" filepath="$PROJECT_DIR$/.idea/modules/kafka-reader-json/spring-cloud-data-flow-example.kafka-reader-json.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kafka-reader-json/spring-cloud-data-flow-example.kafka-reader-json.main.iml" filepath="$PROJECT_DIR$/.idea/modules/kafka-reader-json/spring-cloud-data-flow-example.kafka-reader-json.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kafka-reader-json/spring-cloud-data-flow-example.kafka-reader-json.test.iml" filepath="$PROJECT_DIR$/.idea/modules/kafka-reader-json/spring-cloud-data-flow-example.kafka-reader-json.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kafka-writer-json/spring-cloud-data-flow-example.kafka-writer-json.iml" filepath="$PROJECT_DIR$/.idea/modules/kafka-writer-json/spring-cloud-data-flow-example.kafka-writer-json.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kafka-writer-json/spring-cloud-data-flow-example.kafka-writer-json.main.iml" filepath="$PROJECT_DIR$/.idea/modules/kafka-writer-json/spring-cloud-data-flow-example.kafka-writer-json.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kafka-writer-json/spring-cloud-data-flow-example.kafka-writer-json.test.iml" filepath="$PROJECT_DIR$/.idea/modules/kafka-writer-json/spring-cloud-data-flow-example.kafka-writer-json.test.iml" />
     </modules>
   </component>
 </project>
