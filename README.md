@@ -41,3 +41,8 @@ This demonstrates business and domain translation.
   "profit":194.3
 }
 ```
+
+### `kafka-router`
+Simple application that takes the finalized and voided attributes and mapps them to headers so that the router plugin 
+be used to map to different log apps. 
+ALTERNATIVELY, don't us `@SendTo` or change the Send to's to be Messages as a return and apply the headers there. 
