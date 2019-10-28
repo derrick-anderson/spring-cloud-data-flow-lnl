@@ -19,6 +19,8 @@
       <module name="spring-cloud-data-flow-example.kafka-reader-json.test" target="11" />
       <module name="spring-cloud-data-flow-example.kafka-writer-json.main" target="11" />
       <module name="spring-cloud-data-flow-example.kafka-writer-json.test" target="11" />
+      <module name="spring-cloud-data-flow-example.kafka-writer-xml.main" target="11" />
+      <module name="spring-cloud-data-flow-example.kafka-writer-xml.test" target="11" />
       <module name="spring-cloud-data-flow-example.main" target="1.8" />
       <module name="spring-cloud-data-flow-example.test" target="1.8" />
     </bytecodeTargetLevel>

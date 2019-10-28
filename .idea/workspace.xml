@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fe84cdc9-98f4-40c9-b9c5-22a5ffafa8d0" name="Default Changelist" comment="Migrate to Prometheus as the Meter Registry">
-      <change afterPath="$PROJECT_DIR$/gradle/scripts/springcloudstream.gradle" afterDir="false" />
+    <list default="true" id="fe84cdc9-98f4-40c9-b9c5-22a5ffafa8d0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/com.solstice.example.kafka-reader-json.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/com.solstice.example.spring-cloud-data-flow-example.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/com.solstice.example.spring-cloud-data-flow-example.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/com.solstice.example.spring-cloud-data-flow-example.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/com.solstice.example.spring-cloud-data-flow-example.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/com.solstice.example.spring-cloud-data-flow-example.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/com.solstice.example.spring-cloud-data-flow-example.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/kafka-reader-json/com.solstice.example.kafka-reader-json.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/kafka-reader-json/com.solstice.example.kafka-reader-json.test.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/kafka-writer-json/com.solstice.example.kafka-writer-json.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/kafka-writer-json/com.solstice.example.kafka-writer-json.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/kafka-writer-json/com.solstice.example.kafka-writer-json.test.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka-reader-json/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-reader-json/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka-writer-json/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-writer-json/build.gradle" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,26 +78,26 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build.tools" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.solstice.example" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/kafka-reader-json/src/test/resources" />
+    </key>
     <key name="CreateBuilderDialog.RecentsKey">
       <recent name="com.solstice.example.domain" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/kafka-writer-json/src/main/resources" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/kafka-reader-json/src/test/resources" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/kafka-writer-json/src/main/resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -120,7 +112,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.KafkaWriterJsonGeneratorTest">
+  <component name="RunManager" selected="Gradle.KafkaWriterXmlGeneratorTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -147,78 +139,85 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="spring-cloud-data-flow-example [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="KafkaWriterJsonGeneratorTest.generateData_shouldEmitMessage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="--tests &quot;com.solstice.example.KafkaWriterJsonGeneratorTest.generateData_shouldEmitMessage&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="dependencies" />
+            <option value=":kafka-writer-json:cleanTest" />
+            <option value=":kafka-writer-json:test" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="spring-cloud-data-flow-example:kafka-writer-json [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="KafkaWriterXmlGeneratorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/kafka-writer-json" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="--tests &quot;com.solstice.example.KafkaWriterXmlGeneratorTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="bootJar" />
+            <option value=":kafka-writer-xml:cleanTest" />
+            <option value=":kafka-writer-xml:test" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="spring-cloud-data-flow-example:kafka-writer-json [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="KafkaWriterXmlGeneratorTest.generateXML_shouldCreateValidMessage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/kafka-writer-json" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="--tests &quot;com.solstice.example.KafkaWriterXmlGeneratorTest.generateXML_shouldCreateValidMessage&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value=":kafka-writer-xml:cleanTest" />
+            <option value=":kafka-writer-xml:test" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="KafkaWriterJsonGeneratorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="com.solstice.example.kafka-writer-json.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.solstice.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.solstice.example" />
-      <option name="MAIN_CLASS_NAME" value="com.solstice.example.KafkaWriterJsonGeneratorTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="KafkaWriterXmlGeneratorTest.recordMetrics_shouldCaptureMetricsAppropriately" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.solstice.example.KafkaWriterXmlGeneratorTest.recordMetrics_shouldCaptureMetricsAppropriately&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":kafka-writer-xml:cleanTest" />
+            <option value=":kafka-writer-xml:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
@@ -253,19 +252,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.spring-cloud-data-flow-example [dependencies]" />
-      <item itemvalue="Gradle.spring-cloud-data-flow-example:kafka-writer-json [bootJar]" />
-      <item itemvalue="Gradle.spring-cloud-data-flow-example:kafka-writer-json [build]" />
-      <item itemvalue="JUnit.KafkaWriterJsonGeneratorTest" />
       <item itemvalue="Gradle.KafkaWriterJsonGeneratorTest" />
+      <item itemvalue="Gradle.KafkaWriterJsonGeneratorTest.generateData_shouldEmitMessage" />
+      <item itemvalue="Gradle.KafkaWriterXmlGeneratorTest" />
+      <item itemvalue="Gradle.KafkaWriterXmlGeneratorTest.generateXML_shouldCreateValidMessage" />
+      <item itemvalue="Gradle.KafkaWriterXmlGeneratorTest.recordMetrics_shouldCaptureMetricsAppropriately" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.KafkaWriterXmlGeneratorTest" />
+        <item itemvalue="Gradle.KafkaWriterXmlGeneratorTest.recordMetrics_shouldCaptureMetricsAppropriately" />
+        <item itemvalue="Gradle.KafkaWriterXmlGeneratorTest.generateXML_shouldCreateValidMessage" />
         <item itemvalue="Gradle.KafkaWriterJsonGeneratorTest" />
-        <item itemvalue="Gradle.spring-cloud-data-flow-example:kafka-writer-json [build]" />
-        <item itemvalue="Gradle.spring-cloud-data-flow-example [dependencies]" />
-        <item itemvalue="JUnit.KafkaWriterJsonGeneratorTest" />
-        <item itemvalue="Gradle.spring-cloud-data-flow-example:kafka-writer-json [bootJar]" />
+        <item itemvalue="Gradle.KafkaWriterJsonGeneratorTest.generateData_shouldEmitMessage" />
       </list>
     </recent_temporary>
   </component>
@@ -302,7 +301,49 @@
       <option name="project" value="LOCAL" />
       <updated>1572209163625</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Migrate Spring Cloud Stream dependencies to gradle scripts commons.">
+      <created>1572209782420</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572209782420</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Update `.gitignore`">
+      <created>1572209869258</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1572209869258</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Finalize implementation of the Kafka Json Reader.&#10;Implement a pattern for registering and interacting with metrics&#10;Begin a Readme">
+      <created>1572214435124</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1572214435124</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update Pattern for the metric collection in KakfaWriterJson">
+      <created>1572216694698</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1572216694698</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Further Update `.gitignore`">
+      <created>1572217082615</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1572217082615</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Implements Kafka XML Source Application">
+      <created>1572222036660</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1572222036660</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -325,15 +366,32 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit&#10;Creates Kafka Writer Json Project" />
     <MESSAGE value="Migrate to Prometheus as the Meter Registry" />
-    <option name="LAST_COMMIT_MESSAGE" value="Migrate to Prometheus as the Meter Registry" />
+    <MESSAGE value="Migrate Spring Cloud Stream dependencies to gradle scripts commons." />
+    <MESSAGE value="Update `.gitignore`" />
+    <MESSAGE value="Finalize implementation of the Kafka Json Reader.&#10;Implement a pattern for registering and interacting with metrics&#10;Begin a Readme" />
+    <MESSAGE value="Update Pattern for the metric collection in KakfaWriterJson" />
+    <MESSAGE value="Further Update `.gitignore`" />
+    <MESSAGE value="Implements Kafka XML Source Application" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implements Kafka XML Source Application" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/kafka-reader-json/src/test/java/com/solstice/example/KafkaReaderJsonProcessorTest.java</url>
-          <line>28</line>
+          <line>49</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kafka-reader-json/src/test/java/com/solstice/example/KafkaReaderJsonProcessorTest.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kafka-writer-json/src/main/java/com/solstice/example/KafkaWriterJsonGenerator.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
