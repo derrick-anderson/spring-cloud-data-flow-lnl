@@ -24,7 +24,6 @@ public class KafkaWriterXmlGenerator {
     private final String KAFKA_XML_GENERATE_VOID = "kafka.xml.generate.void";
     private final String KAFKA_XML_GENERATE_FINALIZED = "kafka.xml.generate.finalized";
 
-
     private XmlMapper xmlMapper = new XmlMapper();
     private Random rng = new Random();
     private PrometheusMeterRegistry meterRegistry;

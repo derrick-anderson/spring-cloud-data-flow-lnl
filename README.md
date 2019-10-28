@@ -42,7 +42,17 @@ This demonstrates business and domain translation.
 }
 ```
 
-### `kafka-router`
+### `custom-header-processor`
 Simple application that takes the finalized and voided attributes and mapps them to headers so that the router plugin 
 be used to map to different log apps. 
-ALTERNATIVELY, don't us `@SendTo` or change the Send to's to be Messages as a return and apply the headers there. 
+This should be doable with the standard [Header Processor Application](https://docs.spring.io/spring-cloud-stream-app-starters/docs/Einstein.SR3/reference/htmlsingle/#spring-cloud-stream-modules-header-enricher-processor)
+This can be downloaded with the [custom spring initializer](https://start-scs.cfapps.io/)
+
+### `filter`
+We will use the standard filter application with a spel expression to route based on header values set in the `custom-header-processor`
+
+### `log-drain`
+We will use the standard log application to log each type of messsages.
+
+### `dataflow_stream_definition`
+This will be a definition file that creates the stream definition. 
