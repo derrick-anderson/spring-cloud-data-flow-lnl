@@ -1,5 +1,8 @@
 apply from: "$rootDir/gradle/scripts/springboot.gradle"
 apply from: "$rootDir/gradle/scripts/springcloudstream.gradle"
 apply from: "$rootDir/gradle/scripts/prometheus.gradle"
+apply plugin: 'maven'
+apply plugin: 'java'
 
 dependencies {}
+

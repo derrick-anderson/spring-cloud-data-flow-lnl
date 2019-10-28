@@ -11,11 +11,33 @@ This module creates a Kafka bound `Source` application that writes json messages
   "id":1572210122,
   "sourceName":"KafkaJsonWriter",
   "valid":false,
-  "profit":1967695307,
+  "profit":19676,
   "weekend":false
 }
 ```
 
-### `kafka-reader-json`
+### `kafka-writer-xml`
+This module creates a Kafka bound `Source` application that writes xml messages with the following structure
+```xml
+<SALE_RECORD>
+    <SALE_ID>2937703603923367659</SALE_ID>
+    <SOURCE_ID>KAFKA_XML_SOURCE</SOURCE_ID>
+    <IN_PROCESS>true</IN_PROCESS>
+    <ACCEPTED>true</ACCEPTED>
+    <VALUE>11389</VALUE>
+</SALE_RECORD>
+```
+
+### `kafka-reader-json / kafka-reader-xml`
 This module creates a Kafka bound `Processor` application that reads json messages and transforms them into the domain
-object below 
+object below note the absence of the source name fields and the translation of the profit field and the weekend field. 
+This demonstrates business and domain translation.
+
+```json
+{
+  "saleId":2061885782503076571,
+  "finalized":true,
+  "voided":false,
+  "profit":194.3
+}
+```

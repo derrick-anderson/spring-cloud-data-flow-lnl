@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fe84cdc9-98f4-40c9-b9c5-22a5ffafa8d0" name="Default Changelist" comment="convert `recordMetrics` function in KafkaXMLReader to private">
-      <change beforePath="$PROJECT_DIR$/kafka-reader-xml/src/main/java/com/solstice/example/KafkaReaderXMLProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-reader-xml/src/main/java/com/solstice/example/KafkaReaderXMLProcessor.java" afterDir="false" />
+    <list default="true" id="fe84cdc9-98f4-40c9-b9c5-22a5ffafa8d0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka-reader-json/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-reader-json/build.gradle" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +36,38 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="spring-cloud-data-flow-example" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="spring-cloud-data-flow-example" type="f1a62948:ProjectNode" />
+                <item name="kafka-reader-json" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="spring-cloud-data-flow-example" type="f1a62948:ProjectNode" />
+                <item name="kafka-reader-json" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="spring-cloud-data-flow-example" type="f1a62948:ProjectNode" />
+                <item name="kafka-reader-json" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="spring-cloud-data-flow-example" type="f1a62948:ProjectNode" />
+                <item name="kafka-reader-json" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="spring-cloud-data-flow-example" type="f1a62948:ProjectNode" />
+                <item name="kafka-reader-json" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="publishing" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -108,19 +143,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.KafkaReaderXMLProcessorTest">
+  <component name="RunManager" selected="Gradle.spring-cloud-data-flow-lnl:kafka-reader-json [install]">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KafkaReaderXMLProcessorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Tests in 'spring-cloud-data-flow-example.kafka-reader-xml.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.solstice.example.KafkaReaderXMLProcessorTest&quot;" />
+        <option name="scriptParameters" value="--tests *" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -128,66 +163,6 @@
           <list>
             <option value=":kafka-reader-xml:cleanTest" />
             <option value=":kafka-reader-xml:test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="KafkaReaderXMLProcessorTest.processXmlSource_ShouldConsumeAValidMessage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.solstice.example.KafkaReaderXMLProcessorTest.processXmlSource_ShouldConsumeAValidMessage&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":kafka-reader-xml:cleanTest" />
-            <option value=":kafka-reader-xml:test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="KafkaReaderXMLProcessorTest.recordMetrics_shouldTrackMetricsCorrectly" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.solstice.example.KafkaReaderXMLProcessorTest.recordMetrics_shouldTrackMetricsCorrectly&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":kafka-reader-xml:cleanTest" />
-            <option value=":kafka-reader-xml:test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="KafkaWriterXmlGeneratorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.solstice.example.KafkaWriterXmlGeneratorTest&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":kafka-writer-xml:cleanTest" />
-            <option value=":kafka-writer-xml:test" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -213,6 +188,63 @@
         <option name="vmOptions" />
       </ExternalSystemSettings>
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="spring-cloud-data-flow-lnl:kafka-reader-json [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/kafka-reader-json" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="spring-cloud-data-flow-lnl:kafka-reader-json [install]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/kafka-reader-json" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="install" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="spring-cloud-data-flow-lnl:kafka-reader-json [publishToMavenLocal]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/kafka-reader-json" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="publishToMavenLocal" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -248,19 +280,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.KafkaWriterXmlGeneratorTest" />
       <item itemvalue="Gradle.Tests in 'spring-cloud-data-flow-example.kafka-writer-xml.test'" />
-      <item itemvalue="Gradle.KafkaReaderXMLProcessorTest.processXmlSource_ShouldConsumeAValidMessage" />
-      <item itemvalue="Gradle.KafkaReaderXMLProcessorTest" />
-      <item itemvalue="Gradle.KafkaReaderXMLProcessorTest.recordMetrics_shouldTrackMetricsCorrectly" />
+      <item itemvalue="Gradle.Tests in 'spring-cloud-data-flow-example.kafka-reader-xml.test'" />
+      <item itemvalue="Gradle.spring-cloud-data-flow-lnl:kafka-reader-json [install]" />
+      <item itemvalue="Gradle.spring-cloud-data-flow-lnl:kafka-reader-json [build]" />
+      <item itemvalue="Gradle.spring-cloud-data-flow-lnl:kafka-reader-json [publishToMavenLocal]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.KafkaReaderXMLProcessorTest" />
-        <item itemvalue="Gradle.KafkaReaderXMLProcessorTest.recordMetrics_shouldTrackMetricsCorrectly" />
-        <item itemvalue="Gradle.KafkaReaderXMLProcessorTest.processXmlSource_ShouldConsumeAValidMessage" />
+        <item itemvalue="Gradle.spring-cloud-data-flow-lnl:kafka-reader-json [publishToMavenLocal]" />
+        <item itemvalue="Gradle.spring-cloud-data-flow-lnl:kafka-reader-json [build]" />
+        <item itemvalue="Gradle.spring-cloud-data-flow-lnl:kafka-reader-json [install]" />
         <item itemvalue="Gradle.Tests in 'spring-cloud-data-flow-example.kafka-writer-xml.test'" />
-        <item itemvalue="Gradle.KafkaWriterXmlGeneratorTest" />
+        <item itemvalue="Gradle.Tests in 'spring-cloud-data-flow-example.kafka-reader-xml.test'" />
       </list>
     </recent_temporary>
   </component>
@@ -356,7 +388,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572232168913</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="convert `recordMetrics` function in KafkaXMLReader to private">
+      <created>1572232201927</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1572232201927</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -386,7 +425,8 @@
     <MESSAGE value="Further Update `.gitignore`" />
     <MESSAGE value="Implements Kafka XML Source Application" />
     <MESSAGE value="Implements Kakfa XML Reader" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implements Kakfa XML Reader" />
+    <MESSAGE value="convert `recordMetrics` function in KafkaXMLReader to private" />
+    <option name="LAST_COMMIT_MESSAGE" value="convert `recordMetrics` function in KafkaXMLReader to private" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
