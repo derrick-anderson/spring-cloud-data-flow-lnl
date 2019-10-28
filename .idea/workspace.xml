@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fe84cdc9-98f4-40c9-b9c5-22a5ffafa8d0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/kafka-reader-xml/src/main/java/com/solstice/example/KafkaReaderXMLProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka-reader-xml/src/main/java/com/solstice/example/KafkaReaderXmlApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka-reader-xml/src/main/java/com/solstice/example/domain/SaleRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka-reader-xml/src/main/java/com/solstice/example/domain/XMLSource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka-reader-xml/src/test/java/com/solstice/example/KafkaReaderXMLProcessorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka-reader-xml/src/test/resources/sampleValidKafkaSaleMessage.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+    <list default="true" id="fe84cdc9-98f4-40c9-b9c5-22a5ffafa8d0" name="Default Changelist" comment="convert `recordMetrics` function in KafkaXMLReader to private">
+      <change beforePath="$PROJECT_DIR$/kafka-reader-xml/src/main/java/com/solstice/example/KafkaReaderXMLProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-reader-xml/src/main/java/com/solstice/example/KafkaReaderXMLProcessor.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -101,6 +91,7 @@
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/kafka-reader-json/src/main/resources" />
       <recent name="$PROJECT_DIR$/kafka-reader-xml/src/main/resources" />
       <recent name="$PROJECT_DIR$/kafka-writer-json/src/main/resources" />
     </key>
@@ -358,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572229057497</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Implements Kakfa XML Reader">
+      <created>1572232168913</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1572232168913</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -387,7 +385,8 @@
     <MESSAGE value="Update Pattern for the metric collection in KakfaWriterJson" />
     <MESSAGE value="Further Update `.gitignore`" />
     <MESSAGE value="Implements Kafka XML Source Application" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implements Kafka XML Source Application" />
+    <MESSAGE value="Implements Kakfa XML Reader" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implements Kakfa XML Reader" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">

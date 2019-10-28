@@ -63,7 +63,7 @@ public class KafkaReaderXMLProcessor {
         return transformedRecord;
     }
 
-    public void recordMetrics(SaleRecord record){
+    private void recordMetrics(SaleRecord record){
         read.increment();
         if(record.voided){ voided.increment();}
         if (record.finalized) { finalized.increment(); }
