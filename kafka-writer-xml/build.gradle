@@ -1,0 +1,7 @@
+apply from: "$rootDir/gradle/scripts/springboot.gradle"
+apply from: "$rootDir/gradle/scripts/springcloudstream.gradle"
+apply from: "$rootDir/gradle/scripts/prometheus.gradle"
+
+dependencies {
+    implementation('com.fasterxml.jackson.dataformat:jackson-dataformat-xml')
+}
