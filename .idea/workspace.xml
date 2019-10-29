@@ -442,6 +442,7 @@
       </method>
     </configuration>
     <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <properties />
       <listeners />
@@ -455,10 +456,6 @@
       <item itemvalue="Gradle.spring-cloud-data-flow-lnl:kafka-reader-json [install]" />
       <item itemvalue="Gradle.spring-cloud-data-flow-lnl:kafka-reader-json [build]" />
       <item itemvalue="Gradle.spring-cloud-data-flow-lnl:kafka-reader-json [publishToMavenLocal]" />
-      <item itemvalue="Spring Boot.KafkaReaderJsonApplication" />
-      <item itemvalue="Spring Boot.kafkaWriterJsonApplication" />
-      <item itemvalue="Spring Boot.KafkaReaderXmlApplication" />
-      <item itemvalue="Spring Boot.KafkaWriterXmlApplication" />
     </list>
     <recent_temporary>
       <list>
