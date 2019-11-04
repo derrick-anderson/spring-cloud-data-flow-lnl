@@ -6,3 +6,7 @@ apply plugin: 'java'
 
 dependencies {}
 
+task docker(type: Exec){
+    dependsOn 'build'
+    commandLine './buildDocker.sh'
+}

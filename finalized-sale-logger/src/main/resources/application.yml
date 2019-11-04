@@ -1,0 +1,18 @@
+management:
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: prometheus, info, health, bindings
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: finalized-sale-records
+    streamapp:
+      security:
+        enabled: false

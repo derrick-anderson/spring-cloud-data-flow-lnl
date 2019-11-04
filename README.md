@@ -57,5 +57,3 @@ We will use the standard log application to log each type of messsages.
 ### `dataflow_stream_definition`
 This will be a definition file that creates the stream definition. 
 
-
-NOTE: THESE APPS WILL ALL HAVE TO BE DOCKERIZED TO WORK ON GOOGLEKUBERNETES ENGINE

@@ -5,3 +5,7 @@ apply from: "$rootDir/gradle/scripts/prometheus.gradle"
 dependencies {
     implementation('com.fasterxml.jackson.dataformat:jackson-dataformat-xml')
 }
+task docker(type: Exec){
+    dependsOn 'build'
+    commandLine './buildDocker.sh'
+}

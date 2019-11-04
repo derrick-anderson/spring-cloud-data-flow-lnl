@@ -37,7 +37,7 @@ public class KafkaReaderJsonProcessorTest {
 	public void processSourceMesssage_shouldMapValidSale() throws IOException {
 
 		// Create the input message from the input file and send to input channel
-		String message = IOUtils.toString(new ClassPathResource("/sampleValidKafkaSaleMessage.json").getInputStream());
+		String message = IOUtils.toString(new ClassPathResource("sampleValidKafkaSaleMessage.json").getInputStream());
 		processor.input().send(MessageBuilder.withPayload(message).build());
 
 		// Collect the message that is output with the message collector
@@ -56,8 +56,8 @@ public class KafkaReaderJsonProcessorTest {
 		assertThat(capturedSaleRecord.profit).isEqualTo(new BigDecimal("196.7"));
 
 		// Assert the counters in the registry are correct
-		assertThat(prometheusMeterRegistry.find("kafka.json.processed").counter().count()).isEqualTo(1);
-		assertThat(prometheusMeterRegistry.find("kafka.json.voided").counter().count()).isEqualTo(0);
+		assertThat(prometheusMeterRegistry.find("kafka.json.process.total").counter().count()).isEqualTo(1);
+		assertThat(prometheusMeterRegistry.find("kafka.json.process.voided").counter().count()).isEqualTo(0);
 
 	}
 }

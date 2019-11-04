@@ -67,9 +67,9 @@ public class KafkaReaderXMLProcessorTest {
 
         processor.input().send(MessageBuilder.withPayload(message).build());
 
-        assertThat(meterRegistry.find("kafka.xml.read").counter().count()).isNotNull().isEqualTo(1.0);
-        assertThat(meterRegistry.find("kafka.xml.read.void").counter().count()).isNotNull().isEqualTo(0.0);
-        assertThat(meterRegistry.find("kafka.xml.read.finalized").counter().count()).isNotNull().isEqualTo(1.0);
+        assertThat(meterRegistry.find("kafka.xml.process.total").counter().count()).isNotNull().isEqualTo(1.0);
+        assertThat(meterRegistry.find("kafka.xml.process.void").counter().count()).isNotNull().isEqualTo(0.0);
+        assertThat(meterRegistry.find("kafka.xml.process.finalized").counter().count()).isNotNull().isEqualTo(1.0);
 
     }
 }

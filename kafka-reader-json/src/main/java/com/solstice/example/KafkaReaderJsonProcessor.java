@@ -7,6 +7,7 @@ import io.micrometer.prometheus.PrometheusMeterRegistry;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.cloud.stream.messaging.Processor;
+import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.messaging.handler.annotation.SendTo;
 
 import java.math.BigDecimal;
@@ -15,18 +16,23 @@ import java.math.BigDecimal;
 public class KafkaReaderJsonProcessor {
 
     private PrometheusMeterRegistry prometheusMeterRegistry;
-    private Counter processed;
+    private Counter total;
     private Counter voided;
+    private Counter finalized;
 
     public KafkaReaderJsonProcessor(PrometheusMeterRegistry prometheusMeterRegistry){
         this. prometheusMeterRegistry = prometheusMeterRegistry;
-        processed = Counter.builder("kafka.json.processed")
+        total = Counter.builder("kafka.json.process.total")
                 .baseUnit("SaleRecord")
                 .description("Number of Sales processed in the Json Message Handler")
                 .register(prometheusMeterRegistry);
-        voided = Counter.builder("kafka.json.voided")
+        voided = Counter.builder("kafka.json.process.voided")
                 .baseUnit("SaleRecord")
                 .description("Number of Sales processed that were voided in the Json Message Handler")
+                .register(prometheusMeterRegistry);
+        finalized = Counter.builder("kafka.json.process.finalized")
+                .baseUnit("SaleRecord")
+                .description("Number of Sales processed that were finalized in the Json Message Handler")
                 .register(prometheusMeterRegistry);
     }
 
@@ -45,13 +51,17 @@ public class KafkaReaderJsonProcessor {
 
         // Return the record and log the handling
         recordMetrics(record);
+        System.out.println("Processing Record with ID: " + source.id.toString() + "\nVoided : " + !source.valid + "\nFinalized: " + !source.weekend);
         return record;
     }
 
     private void recordMetrics(SaleRecord record){
-        processed.increment();
+        total.increment();
         if(record.voided){
             voided.increment();
+        }
+        if(!record.voided && record.finalized){
+            finalized.increment();
         }
     }
 }

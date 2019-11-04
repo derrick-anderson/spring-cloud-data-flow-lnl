@@ -4,4 +4,7 @@ apply plugin: 'maven'
 
 dependencies {
     implementation 'io.micrometer:micrometer-registry-prometheus:latest.release'
+    compile 'io.micrometer:micrometer-registry-prometheus:latest.release'
+//    implementation 'io.micrometer.prometheus:prometheus-rsocket-spring:0.9.0'
+//    implementation 'io.micrometer.prometheus:prometheus-rsocket-client:0.9.0'
 }

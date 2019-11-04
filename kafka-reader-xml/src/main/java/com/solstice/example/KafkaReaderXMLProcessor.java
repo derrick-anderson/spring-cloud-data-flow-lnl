@@ -17,11 +17,11 @@ import java.math.BigDecimal;
 public class KafkaReaderXMLProcessor {
 
     private PrometheusMeterRegistry meterRegistry;
-    private final String KAFKA_XML_READ = "kafka.xml.read";
+    private final String KAFKA_XML_READ = "kafka.xml.process.total";
     private Counter read;
-    private final String KAFKA_XML_VOIDED = "kafka.xml.read.void";
+    private final String KAFKA_XML_VOIDED = "kafka.xml.process.void";
     private Counter voided;
-    private final String KAFKA_XML_FINALIZED = "kafka.xml.read.finalized";
+    private final String KAFKA_XML_FINALIZED = "kafka.xml.process.finalized";
     private Counter finalized;
 
     //Because this is using jackson we have to manually transform the input
@@ -58,7 +58,7 @@ public class KafkaReaderXMLProcessor {
 
         //Record Metrics
         recordMetrics(transformedRecord);
-
+        System.out.println("Processing Record : " + xmlSource);
         // Return the transformed record
         return transformedRecord;
     }
@@ -66,6 +66,6 @@ public class KafkaReaderXMLProcessor {
     private void recordMetrics(SaleRecord record){
         read.increment();
         if(record.voided){ voided.increment();}
-        if (record.finalized) { finalized.increment(); }
+        if(!record.voided && record.finalized) { finalized.increment(); }
     }
 }

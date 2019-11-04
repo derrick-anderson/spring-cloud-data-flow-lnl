@@ -6,9 +6,14 @@ management:
   endpoints:
     web:
       exposure:
-        include: prometheus
+        include: prometheus, info, health, bindings
 spring:
   cloud:
+    stream:
+      bindings:
+        output:
+          destination: json-sales-messages
+      propagateOriginalContentType: false
     streamapp:
       security:
         enabled: false

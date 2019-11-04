@@ -51,7 +51,7 @@ public class KafkaWriterJsonGeneratorTest {
 	@Test
 	public void shouldIncrementRegisteredMetric() throws InterruptedException {
 
-		Counter registerdMetric = registry.find("kafka.json.generate.send").counter();
+		Counter registerdMetric = registry.find("kafka.json.generate.total").counter();
 
 		//Application starts up and finishes executing main, then runs twice more
 		Thread.sleep(2000);

@@ -6,6 +6,7 @@ buildscript {
 
 plugins {
     id 'java'
+    id 'maven'
     id 'maven-publish'
 }
 
@@ -22,3 +23,5 @@ allprojects {
         maven { url 'https://repo.spring.io/milestone' }
     }
 }
+
+task docker(type: Task){}

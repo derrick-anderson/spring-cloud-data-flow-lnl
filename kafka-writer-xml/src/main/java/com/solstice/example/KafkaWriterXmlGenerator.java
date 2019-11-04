@@ -8,6 +8,8 @@ import io.micrometer.prometheus.PrometheusMeterRegistry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.messaging.Source;
+import org.springframework.messaging.Message;
+import org.springframework.messaging.MessageHeaders;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -66,12 +68,19 @@ public class KafkaWriterXmlGenerator {
 
         // Convert Message to XML body and send
         String messageBody = xmlMapper.writeValueAsString(sourceMessage);
-        this.source.output().send(MessageBuilder.withPayload(messageBody).build());
+        System.out.println("Sending Message : " + messageBody);
+
+        Message outputMessage = MessageBuilder
+                .withPayload(messageBody)
+                .setHeader(MessageHeaders.CONTENT_TYPE, "text/xml")
+                .build();
+
+        this.source.output().send(outputMessage);
     }
 
     private void recordMetrics(KafkaXMLSource source){
         sendCount.increment();
         if(source.voided) { voidCount.increment(); }
-        if(source.finalized) { finalizedCount.increment(); }
+        if(!source.voided && source.finalized) { finalizedCount.increment(); }
     }
 }

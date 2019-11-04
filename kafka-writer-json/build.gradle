@@ -2,4 +2,12 @@ apply from: "$rootDir/gradle/scripts/springboot.gradle"
 apply from: "$rootDir/gradle/scripts/springcloudstream.gradle"
 apply from: "$rootDir/gradle/scripts/prometheus.gradle"
 
+apply plugin: 'java'
+apply plugin: 'maven'
+
 dependencies {}
+
+task docker(type: Exec){
+    dependsOn 'build'
+    commandLine './buildDocker.sh'
+}
